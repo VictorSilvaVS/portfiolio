@@ -139,6 +139,7 @@
             background: linear-gradient(135deg, rgba(0, 242, 255, 0.1) 0%, rgba(0, 114, 255, 0.1) 100%);
             opacity: 0;
             transition: opacity 0.4s ease;
+            pointer-events: none; /* Permite que eventos de clique "atravessem" o pseudo-elemento */
         }
 
         .project-card:hover {

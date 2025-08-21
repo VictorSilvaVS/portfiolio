@@ -1,530 +1,537 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio IA/Backend Python</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/main.css">
-</head>
-<body class="bg-dark text-light">
-    <!-- Navigation -->
-    <nav class="fixed w-full z-50 bg-opacity-90 bg-dark backdrop-blur-md border-b border-gray-800 transition-all duration-300">
-        <div class="container mx-auto px-6">
-            <div class="flex justify-between items-center h-20">
-                <a href="#" class="text-2xl font-bold text-gradient hover:opacity-80 transition-opacity">Victor Silva</a>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="nav-link text-light">Home</a>
-                    <a href="#about" class="nav-link text-light">About</a>
-                    <a href="#skills" class="nav-link text-light">Skills</a>
-                    <a href="#projects" class="nav-link text-light">Projects</a>
-                    <a href="#experience" class="nav-link text-light">Experience</a>
-                    <a href="#contact" class="nav-link text-light">Contact</a>
-                </div>
-                <button id="mobile-menu-button" class="md:hidden text-light focus:outline-none hover:text-primary transition-colors">
-                    <i class="fas fa-bars text-2xl"></i>
-                </button>
-            </div>
-        </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfólio IA/Backend Python</title>
+        
+        <!-- External Resources -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="assets/css/main.css">
+    </head>
 
-        <div id="mobile-menu" class="hidden md:hidden bg-dark bg-opacity-95 backdrop-blur-md border-t border-gray-800">
-            <a href="#home" class="block py-3 px-6 text-sm hover:bg-gray-800 transition-colors">Home</a>
-            <a href="#about" class="block py-3 px-6 text-sm hover:bg-gray-800 transition-colors">About</a>
-            <a href="#skills" class="block py-3 px-6 text-sm hover:bg-gray-800 transition-colors">Skills</a>
-            <a href="#projects" class="block py-3 px-6 text-sm hover:bg-gray-800 transition-colors">Projects</a>
-            <a href="#experience" class="block py-3 px-6 text-sm hover:bg-gray-800 transition-colors">Experience</a>
-            <a href="#contact" class="block py-3 px-6 text-sm hover:bg-gray-800 transition-colors">Contact</a>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero flex items-center justify-center pt-20">
-        <div class="lava-lamp">
-            <div class="blob"></div>
-            <div class="blob"></div>
-            <div class="blob"></div>
-            <div class="blob"></div>
-            <div class="blob"></div>
-        </div>
-
-        <div class="hero-content container mx-auto px-6 py-20 text-center">
-            <div class="max-w-4xl mx-auto">
-                <h4 class="text-primary text-lg mb-4 font-mono">Hello, I am</h4>
-                <h1 class="text-5xl md:text-7xl font-bold text-light mb-6 leading-tight">
-                    <div class="mb-2">
-                        <span id="name-typewriter"></span>
+    <body class="bg-dark text-light">
+        <!-- Header Navigation -->
+        <nav class="fixed w-full z-50 bg-opacity-90 bg-dark backdrop-blur-md border-b border-gray-800 transition-all duration-300">
+            <div class="container mx-auto px-6">
+                <div class="flex justify-between items-center h-20">
+                    <a href="#" class="text-2xl font-bold text-gradient hover:opacity-80 transition-opacity">Victor Silva</a>
+                    <div class="hidden md:flex space-x-8">
+                        <a href="#home" class="nav-link text-light">Home</a>
+                        <a href="#about" class="nav-link text-light">About</a>
+                        <a href="#skills" class="nav-link text-light">Skills</a>
+                        <a href="#projects" class="nav-link text-light">Projects</a>
+                        <a href="#experience" class="nav-link text-light">Experience</a>
+                        <a href="#contact" class="nav-link text-light">Contact</a>
                     </div>
-                    <div>
-                        <span id="typewriter" class="typewriter"></span>
-                    </div>
-                </h1>
-                <p class="text-xl text-light opacity-90 mb-8 max-w-2xl mx-auto">
-                    Transforming data into intelligent solutions and building scalable systems that drive business forward.
-                </p>
-                <div class="flex flex-wrap justify-center gap-4">
-                    <a href="#projects" class="btn-gradient px-8 py-3 rounded-full text-base font-medium inline-flex items-center gap-2">
-                        <i class="fas fa-code"></i> View Projects
-                    </a>
-                    <a href="#contact" class="btn-outline border border-primary text-primary hover:border-transparent px-8 py-3 rounded-full text-base font-medium inline-flex items-center gap-2">
-                        <i class="fas fa-paper-plane"></i> Contact
-                    </a>
+                    <button id="mobile-menu-button" class="md:hidden text-light focus:outline-none hover:text-primary transition-colors">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
                 </div>
             </div>
-            <div class="scroll-indicator mt-16">
-                <a href="#about" class="text-light text-2xl hover:text-primary transition-colors">
-                    <i class="fas fa-chevron-down"></i>
-                </a>
-            </div>
-        </div>
-    </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-24 grid-pattern">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col lg:flex-row items-center gap-16">
-                <div class="lg:w-1/2 mb-10 lg:mb-0 fade-in">
-                    <div class="relative max-w-md mx-auto">
-                        <div class="absolute -inset-4 bg-gradient-to-r from-primary to-secondary rounded-2xl blur opacity-25"></div>
-                        <div class="relative bg-dark rounded-2xl overflow-hidden border border-gray-800 shadow-2xl hover:shadow-primary/20 transition-shadow duration-300">
-                            <img src="assets/img/profile.png" 
-                                 alt="Desenvolvedor IA" 
-                                 class="w-full h-auto hover:scale-105 transition-transform duration-500">
-                        </div>
-                    </div>
-                </div>
-                <div class="lg:w-1/2 lg:pl-12 fade-in">
-                    <h2 class="section-title text-4xl font-bold text-light mb-12">About <span class="text-gradient">Me</span></h2>
-                    <p class="text-light opacity-90 mb-6 text-lg leading-relaxed">
-                        I am a developer specialized in Artificial Intelligence and Backend with Python, passionate about creating innovative technological solutions that solve real problems and drive business forward.
-                    </p>
-                    <p class="text-light opacity-90 mb-8 text-lg leading-relaxed">
-                        With over 5 years of experience in machine learning, natural language processing, and development of robust APIs, my goal is to build intelligent systems that add real value through technology.
-                    </p>
-                    <div class="flex flex-wrap gap-4 mt-8">
-                        <div class="flex items-center gap-3">
-                            <div class="w-3 h-3 rounded-full bg-primary glow"></div>
-                            <span class="text-light">Available for freelance</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <div class="w-3 h-3 rounded-full bg-primary glow"></div>
-                            <span class="text-light">+20 projects completed</span>
-                        </div>
-                    </div>
-                </div>
+            <div id="mobile-menu" class="hidden md:hidden bg-dark bg-opacity-95 backdrop-blur-md border-t border-gray-800">
+                <a href="#home" class="block py-3 px-6 text-sm hover:bg-gray-800 transition-colors">Home</a>
+                <a href="#about" class="block py-3 px-6 text-sm hover:bg-gray-800 transition-colors">About</a>
+                <a href="#skills" class="block py-3 px-6 text-sm hover:bg-gray-800 transition-colors">Skills</a>
+                <a href="#projects" class="block py-3 px-6 text-sm hover:bg-gray-800 transition-colors">Projects</a>
+                <a href="#experience" class="block py-3 px-6 text-sm hover:bg-gray-800 transition-colors">Experience</a>
+                <a href="#contact" class="block py-3 px-6 text-sm hover:bg-gray-800 transition-colors">Contact</a>
             </div>
-        </div>
-    </section>
+        </nav>
 
-    <!-- Skills Section -->
-    <section id="skills" class="py-24 bg-dark">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16 fade-in">
-                <h2 class="section-title text-4xl font-bold text-light inline-block">My <span class="text-gradient">Skills</span></h2>
-                <p class="text-light opacity-80 max-w-2xl mx-auto mt-8 text-lg">
-                    Technologies and tools I master and use daily to create efficient solutions.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto fade-in">
-                <!-- Technical Skills -->
-                <div class="bg-gray-900 bg-opacity-50 rounded-xl p-8 border border-gray-800 hover:border-primary transition-all duration-300">
-                    <h3 class="text-xl font-semibold text-light mb-6 flex items-center gap-2">
-                        <i class="fas fa-code text-primary"></i> Technical
-                    </h3>
-                    <div class="space-y-6">
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="text-light">Python</span>
-                                <span class="text-primary">95%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width: 95%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="text-light">Machine Learning</span>
-                                <span class="text-primary">90%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="text-light">APIs (FastAPI/Flask)</span>
-                                <span class="text-primary">92%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width: 92%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="text-light">Database</span>
-                                <span class="text-primary">88%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width: 88%"></div>
-                            </div>
-                        </div>
-                    </div>
+        <!-- Main Content -->
+        <main>
+            <!-- Hero Section -->
+            <section id="home" class="hero flex items-center justify-center pt-20">
+                <div class="lava-lamp">
+                    <div class="blob"></div>
+                    <div class="blob"></div>
+                    <div class="blob"></div>
+                    <div class="blob"></div>
+                    <div class="blob"></div>
                 </div>
 
-                <!-- Tools & Frameworks -->
-                <div class="bg-gray-900 bg-opacity-50 rounded-xl p-8 border border-gray-800 hover:border-primary transition-all duration-300">
-                    <h3 class="text-xl font-semibold text-light mb-6 flex items-center gap-2">
-                        <i class="fas fa-cogs text-primary"></i> Tools
-                    </h3>
-                    <div class="flex flex-wrap gap-3">
-                        <span class="tech-badge px-4 py-2 rounded-full text-sm flex items-center gap-2">
-                            <i class="fab fa-python"></i> Python
-                        </span>
-                        <span class="tech-badge px-4 py-2 rounded-full text-sm flex items-center gap-2">
-                            <i class="fas fa-brain"></i> TensorFlow
-                        </span>
-                        <span class="tech-badge px-4 py-2 rounded-full text-sm flex items-center gap-2">
-                            <i class="fas fa-project-diagram"></i> PyTorch
-                        </span>
-                        <span class="tech-badge px-4 py-2 rounded-full text-sm flex items-center gap-2">
-                            <i class="fas fa-server"></i> FastAPI
-                        </span>
-                        <span class="tech-badge px-4 py-2 rounded-full text-sm flex items-center gap-2">
-                            <i class="fab fa-docker"></i> Docker
-                        </span>
-                        <span class="tech-badge px-4 py-2 rounded-full text-sm flex items-center gap-2">
-                            <i class="fab fa-aws"></i> AWS
-                        </span>
-                        <span class="tech-badge px-4 py-2 rounded-full text-sm flex items-center gap-2">
-                            <i class="fas fa-database"></i> PostgreSQL
-                        </span>
-                        <span class="tech-badge px-4 py-2 rounded-full text-sm flex items-center gap-2">
-                            <i class="fas fa-database"></i> MongoDB
-                        </span>
-                        <span class="tech-badge px-4 py-2 rounded-full text-sm flex items-center gap-2">
-                            <i class="fab fa-git-alt"></i> Git
-                        </span>
-                        <span class="tech-badge px-4 py-2 rounded-full text-sm flex items-center gap-2">
-                            <i class="fas fa-flask"></i> Flask
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="py-24 grid-pattern">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16 fade-in">
-                <h2 class="section-title text-4xl font-bold text-light inline-block">My <span class="text-gradient">Projects</span></h2>
-                <p class="text-light opacity-80 max-w-2xl mx-auto mt-8 text-lg">
-                    Some of my most relevant works. Hover to see details.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project 1 -->
-                <div class="project-card fade-in">
-                    <div class="relative h-64 overflow-hidden">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOgyc-vn42VEGFui21KvBYLg6MoURxp_IRSY3086vWW8-x6lmkWFxtYP1O6GHUDDqZ1H4&usqp=CAU" 
-                             alt="VisionAlign" 
-                             class="project-image w-full h-full object-cover">
-                        <img src="assets/gifs/video_detectado.gif" 
-                             alt="GIF VisionAlign" 
-                             class="project-gif">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                <div class="hero-content container mx-auto px-6 py-20 text-center">
+                    <div class="max-w-4xl mx-auto">
+                        <h4 class="text-primary text-lg mb-4 font-mono">Hello, I am</h4>
+                        <h1 class="text-5xl md:text-7xl font-bold text-light mb-6 leading-tight">
+                            <div class="mb-2">
+                                <span id="name-typewriter"></span>
+                            </div>
                             <div>
-                                <h3 class="text-xl font-bold text-white mb-2">VisionAlign</h3>
-                                <p class="text-white opacity-90 text-sm">Computer vision AI that detects the orientation of cans and controls production lines.</p>
+                                <span id="typewriter" class="typewriter"></span>
+                            </div>
+                        </h1>
+                        <p class="text-xl text-light opacity-90 mb-8 max-w-2xl mx-auto">
+                            Transforming data into intelligent solutions and building scalable systems that drive business forward.
+                        </p>
+                        <div class="flex flex-wrap justify-center gap-4">
+                            <a href="#projects" class="btn-gradient px-8 py-3 rounded-full text-base font-medium inline-flex items-center gap-2">
+                                <i class="fas fa-code"></i> View Projects
+                            </a>
+                            <a href="#contact" class="btn-outline border border-primary text-primary hover:border-transparent px-8 py-3 rounded-full text-base font-medium inline-flex items-center gap-2">
+                                <i class="fas fa-paper-plane"></i> Contact
+                            </a>
+                        </div>
+                    </div>
+                    <div class="scroll-indicator mt-16">
+                        <a href="#about" class="text-light text-2xl hover:text-primary transition-colors">
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="py-24 grid-pattern">
+                <div class="container mx-auto px-6">
+                    <div class="flex flex-col lg:flex-row items-center gap-16">
+                        <div class="lg:w-1/2 mb-10 lg:mb-0 fade-in">
+                            <div class="relative max-w-md mx-auto">
+                                <div class="absolute -inset-4 bg-gradient-to-r from-primary to-secondary rounded-2xl blur opacity-25"></div>
+                                <div class="relative bg-dark rounded-2xl overflow-hidden border border-gray-800 shadow-2xl hover:shadow-primary/20 transition-shadow duration-300">
+                                    <img src="assets/img/profile.png" 
+                                         alt="Desenvolvedor IA" 
+                                         class="w-full h-auto hover:scale-105 transition-transform duration-500">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:w-1/2 lg:pl-12 fade-in">
+                            <h2 class="section-title text-4xl font-bold text-light mb-12">About <span class="text-gradient">Me</span></h2>
+                            <p class="text-light opacity-90 mb-6 text-lg leading-relaxed">
+                                I am a developer specialized in Artificial Intelligence and Backend with Python, passionate about creating innovative technological solutions that solve real problems and drive business forward.
+                            </p>
+                            <p class="text-light opacity-90 mb-8 text-lg leading-relaxed">
+                                With over 5 years of experience in machine learning, natural language processing, and development of robust APIs, my goal is to build intelligent systems that add real value through technology.
+                            </p>
+                            <div class="flex flex-wrap gap-4 mt-8">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-3 h-3 rounded-full bg-primary glow"></div>
+                                    <span class="text-light">Available for freelance</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <div class="w-3 h-3 rounded-full bg-primary glow"></div>
+                                    <span class="text-light">+20 projects completed</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="p-6">
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="tech-badge text-xs px-3 py-1 rounded-full">Python</span>
-                            <span class="tech-badge text-xs px-3 py-1 rounded-full">FastAPI</span>
-                            <span class="tech-badge text-xs px-3 py-1 rounded-full">Pytorch</span>
-                            <span class="tech-badge text-xs px-3 py-1 rounded-full">OpenCV</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <a href="#" class="text-primary text-sm font-medium hover:underline inline-flex items-center gap-1">
-                                <i class="fas fa-external-link-alt"></i> Demo
-                            </a>
-                            <a href="#" class="text-light text-sm font-medium hover:text-primary inline-flex items-center gap-1">
-                                <i class="fab fa-github"></i> Code
-                            </a>
-                        </div>
-                    </div>
                 </div>
+            </section>
 
-                <!-- Project 2 -->
-                <div class="project-card fade-in" style="transition-delay: 100ms;">
-                    <div class="relative h-64 overflow-hidden">
-                        <img src="https://cdn.prod.website-files.com/61a51a6fff9085700039fcd8/63bc673c33fd7c7a6843246b_vis%C3%A3o%20computacional.png" 
-                             alt="Chatbot Inteligente" 
-                             class="project-image w-full h-full object-cover">
-                        <img src="https://media.giphy.com/media/S3nZFke4WXjDIFF1wv/giphy.gif" 
-                             alt="GIF Chatbot" 
-                             class="project-gif">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                            <div>
-                                <h3 class="text-xl font-bold text-white mb-2">VisionFracture</h3>
-                                <p class="text-white opacity-90 text-sm">AI that inspects normal cans, detecting fractures in the dome for quality control.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="tech-badge text-xs px-3 py-1 rounded-full">Python</span>
-                            <span class="tech-badge text-xs px-3 py-1 rounded-full">Pytorch</span>
-                            <span class="tech-badge text-xs px-3 py-1 rounded-full">OpenCV</span>
-                            <span class="tech-badge text-xs px-3 py-1 rounded-full">FastAPI</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <a href="#" class="text-primary text-sm font-medium hover:underline inline-flex items-center gap-1">
-                                <i class="fas fa-external-link-alt"></i> Demo
-                            </a>
-                            <a href="#" class="text-light text-sm font-medium hover:text-primary inline-flex items-center gap-1">
-                                <i class="fab fa-github"></i> Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="project-card fade-in" style="transition-delay: 200ms;">
-                    <div class="relative h-64 overflow-hidden">
-                        <img src="./assets/img/Iris.png" 
-                             alt="API de Análise de Sentimentos" 
-                             class="project-image w-full h-full object-cover">
-                        <img src="https://media.giphy.com/media/l41lI4bY4Ijf62pfa/giphy.gif" 
-                             alt="GIF API" 
-                             class="project-gif">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                            <div>
-                                <h3 class="text-xl font-bold text-white mb-2">ENEM Lab </h3>
-                                <p class="text-white opacity-90 text-sm">An AI-powered study platform that diagnoses knowledge gaps and optimizes the study plan for the ENEM.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="tech-badge text-xs px-3 py-1 rounded-full">FastAPI</span>
-                            <span class="tech-badge text-xs px-3 py-1 rounded-full">Keras</span>
-                            <span class="tech-badge text-xs px-3 py-1 rounded-full">Python</span>
-                            <span class="tech-badge text-xs px-3 py-1 rounded-full">Kubernetes</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <a href="#" class="text-primary text-sm font-medium hover:underline inline-flex items-center gap-1">
-                                <i class="fas fa-external-link-alt"></i> Demo
-                            </a>
-                            <a href="#" class="text-light text-sm font-medium hover:text-primary inline-flex items-center gap-1">
-                                <i class="fab fa-github"></i> Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="text-center mt-16 fade-in">
-                <a href="#" class="btn-outline border border-primary text-primary hover:border-transparent px-8 py-3 rounded-full text-base font-medium inline-flex items-center gap-2">
-                    <i class="fas fa-eye"></i> View All Projects
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="py-24 bg-dark">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16 fade-in">
-                <h2 class="section-title text-4xl font-bold text-light inline-block">My <span class="text-gradient">Journey</span></h2>
-                <p class="text-light opacity-80 max-w-2xl mx-auto mt-8 text-lg">
-                    My professional trajectory and achievements over the years.
-                </p>
-            </div>
-
-            <div class="max-w-3xl mx-auto fade-in">
-                <!-- Experience Timeline -->
-                <div class="space-y-8">
-                    <div class="timeline-item">
-                        <div class="bg-gray-900 bg-opacity-50 rounded-xl p-6 border border-gray-800 hover:border-primary transition-all duration-300">
-                            <h3 class="text-xl font-bold text-light mb-2">Technology Analyst</h3>
-                            <div class="text-primary text-sm mb-3">Canpack Group • 2024 - Present</div>
-                            <p class="text-light opacity-90">
-                               As a technology specialist focused on optimizing industrial processes, I leverage machine learning and deep learning to analyze manufacturing data and drive our team towards World Class Manufacturing standards. My key contributions include developing AI for process control, computer vision, and data management. These advancements have led to a remarkable improvement of over 45% in spoilage and HFI reduction, significantly enhancing operational efficiency and cost savings.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="bg-gray-900 bg-opacity-50 rounded-xl p-6 border border-gray-800 hover:border-primary transition-all duration-300">
-                            <h3 class="text-xl font-bold text-light mb-2">IT Support</h3>
-                            <div class="text-primary text-sm mb-3">Suzano  • 2023 -2024</div>
-                            <p class="text-light opacity-90">
-                                System Documentation: Create and maintain system documentation for use by users, developers, and support staff.
-                                Systems Testing: Plan and execute tests to ensure that IT systems meet requirements and function as expected.
-                                Troubleshooting: Diagnose and resolve issues with IT systems, ensuring optimal availability and performance.
-                                Process Improvement: Analyze business processes and IT systems to identify areas for improvement and implement solutions.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="bg-gray-900 bg-opacity-50 rounded-xl p-6 border border-gray-800 hover:border-primary transition-all duration-300">
-                            <h3 class="text-xl font-bold text-light mb-2">Junior Developer</h3>
-                            <div class="text-primary text-sm mb-3">Google Inc • 2022 - 2023</div>
-                            <p class="text-light opacity-90">
-                                I develop software solutions that align technical and business requirements, resulting in robust and high-performance applications. My work focuses on proactive analysis and correction of failures, optimizing stability and user experience. As a member of agile teams, I actively contribute to continuous improvement through code reviews and strategic planning sessions, ensuring efficient delivery of value.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Education -->
-                <div class="mt-16 fade-in" style="transition-delay: 200ms;">
-                    <h3 class="text-2xl font-bold text-light mb-8 flex items-center gap-3">
-                        <i class="fas fa-graduation-cap text-primary"></i> Education
-                    </h3>
-                    <div class="bg-gray-900 bg-opacity-50 rounded-xl p-6 border border-gray-800 hover:border-primary transition-all duration-300">
-                    <h4 class="text-lg font-bold text-light mb-1">Associate Degree in Systems Development</h4>
-                    <div class="text-primary text-sm mb-3">SENAI • 2023 - 2025</div>
-                    <p class="text-light opacity-90">
-                        Associate's degree in systems development with a focus on web development, databases, and object-oriented programming.
-                    </p>
-                </div>
-                    <div class="bg-gray-900 bg-opacity-50 rounded-xl p-6 border border-gray-800 hover:border-primary transition-all duration-300">
-                        <h4 class="text-lg font-bold text-light mb-1">Systems Analysis and Development</h4>
-                        <div class="text-primary text-sm mb-3">University of Fortaleza • 2023 - 2026</div>
-                        <p class="text-light opacity-90">
-                           Associate's Degree in Logic Programming and Object-Oriented Programming. 
+            <!-- Skills Section -->
+            <section id="skills" class="py-24 bg-dark">
+                <div class="container mx-auto px-6">
+                    <div class="text-center mb-16 fade-in">
+                        <h2 class="section-title text-4xl font-bold text-light inline-block">My <span class="text-gradient">Skills</span></h2>
+                        <p class="text-light opacity-80 max-w-2xl mx-auto mt-8 text-lg">
+                            Technologies and tools I master and use daily to create efficient solutions.
                         </p>
                     </div>
-                    
-                </div>
-                
-            </div>
-        </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-24 grid-pattern">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16 fade-in">
-                <h2 class="section-title text-4xl font-bold text-light inline-block">Get in <span class="text-gradient">Touch</span></h2>
-                <p class="text-light opacity-80 max-w-2xl mx-auto mt-8 text-lg">
-                    Interested in working together? Let's talk!
-                </p>
-            </div>
-
-            <div class="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
-                <div class="fade-in">
-                    <div class="bg-gray-900 bg-opacity-50 rounded-xl p-8 border border-gray-800 hover:border-primary transition-all duration-300 h-full">
-                        <h3 class="text-xl font-semibold text-light mb-6 flex items-center gap-3">
-                            <i class="fas fa-envelope text-primary"></i> Contact Information
-                        </h3>
-                        <div class="space-y-4">
-                            <div class="flex items-start gap-4">
-                                <i class="fas fa-envelope text-primary mt-1"></i>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto fade-in">
+                        <!-- Technical Skills -->
+                        <div class="bg-gray-900 bg-opacity-50 rounded-xl p-8 border border-gray-800 hover:border-primary transition-all duration-300">
+                            <h3 class="text-xl font-semibold text-light mb-6 flex items-center gap-2">
+                                <i class="fas fa-code text-primary"></i> Technical
+                            </h3>
+                            <div class="space-y-6">
                                 <div>
-                                    <h4 class="text-light font-medium">Email</h4>
-                                    <p class="text-light opacity-80 text-sm">victorsilva139br@gmail.com</p>
+                                    <div class="flex justify-between mb-2">
+                                        <span class="text-light">Python</span>
+                                        <span class="text-primary">95%</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 95%"></div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="flex items-start gap-4">
-                                <i class="fas fa-phone-alt text-primary mt-1"></i>
                                 <div>
-                                    <h4 class="text-light font-medium">Phone</h4>
-                                    <p class="text-light opacity-80 text-sm">+55 (85) 98809-2823</p>
+                                    <div class="flex justify-between mb-2">
+                                        <span class="text-light">Machine Learning</span>
+                                        <span class="text-primary">90%</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 90%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between mb-2">
+                                        <span class="text-light">APIs (FastAPI/Flask)</span>
+                                        <span class="text-primary">92%</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 92%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between mb-2">
+                                        <span class="text-light">Database</span>
+                                        <span class="text-primary">88%</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 88%"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="mt-8">
-                            <h3 class="text-xl font-semibold text-light mb-6 flex items-center gap-3">
-                                <i class="fas fa-share-alt text-primary"></i> Social Media
+                        <!-- Tools & Frameworks -->
+                        <div class="bg-gray-900 bg-opacity-50 rounded-xl p-8 border border-gray-800 hover:border-primary transition-all duration-300">
+                            <h3 class="text-xl font-semibold text-light mb-6 flex items-center gap-2">
+                                <i class="fas fa-cogs text-primary"></i> Tools
                             </h3>
-                            <div class="flex space-x-6">
-                                <a href="https://github.com/VictorSilvaVS" class="social-icon text-light text-2xl hover:text-primary">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                                <a href="https://www.linkedin.com/in/viktorsilva" class="social-icon text-light text-2xl hover:text-primary">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </a>
-                                <a href="https://dev.to/vicode" class="social-icon text-light text-2xl hover:text-primary">
-                                    <i class="fab fa-dev"></i>
-                                </a>
-                                <a href="https://medium.com/@kingmister643" class="social-icon text-light text-2xl hover:text-primary">
-                                    <i class="fab fa-medium"></i>
-                                </a>
+                            <div class="flex flex-wrap gap-3">
+                                <span class="tech-badge px-4 py-2 rounded-full text-sm flex items-center gap-2">
+                                    <i class="fab fa-python"></i> Python
+                                </span>
+                                <span class="tech-badge px-4 py-2 rounded-full text-sm flex items-center gap-2">
+                                    <i class="fas fa-brain"></i> TensorFlow
+                                </span>
+                                <span class="tech-badge px-4 py-2 rounded-full text-sm flex items-center gap-2">
+                                    <i class="fas fa-project-diagram"></i> PyTorch
+                                </span>
+                                <span class="tech-badge px-4 py-2 rounded-full text-sm flex items-center gap-2">
+                                    <i class="fas fa-server"></i> FastAPI
+                                </span>
+                                <span class="tech-badge px-4 py-2 rounded-full text-sm flex items-center gap-2">
+                                    <i class="fab fa-docker"></i> Docker
+                                </span>
+                                <span class="tech-badge px-4 py-2 rounded-full text-sm flex items-center gap-2">
+                                    <i class="fab fa-aws"></i> AWS
+                                </span>
+                                <span class="tech-badge px-4 py-2 rounded-full text-sm flex items-center gap-2">
+                                    <i class="fas fa-database"></i> PostgreSQL
+                                </span>
+                                <span class="tech-badge px-4 py-2 rounded-full text-sm flex items-center gap-2">
+                                    <i class="fas fa-database"></i> MongoDB
+                                </span>
+                                <span class="tech-badge px-4 py-2 rounded-full text-sm flex items-center gap-2">
+                                    <i class="fab fa-git-alt"></i> Git
+                                </span>
+                                <span class="tech-badge px-4 py-2 rounded-full text-sm flex items-center gap-2">
+                                    <i class="fas fa-flask"></i> Flask
+                                </span>
                             </div>
                         </div>
                     </div>
                 </div>
+            </section>
 
-                <div class="fade-in" style="transition-delay: 150ms;">
-                    <form action="#" method="POST" class="bg-gray-900 bg-opacity-50 rounded-xl p-8 border border-gray-800 hover:border-primary transition-all duration-300 h-full">
-                        <div class="space-y-6">
-                            <div>
-                                <label for="name" class="block text-light mb-2">Name</label>
-                                <input type="text" name="name" id="name" placeholder="Your name" required 
-                                       class="w-full contact-input p-4 rounded-lg text-light focus:ring-2 focus:ring-primary">
+            <!-- Projects Section -->
+            <section id="projects" class="py-24 grid-pattern">
+                <div class="container mx-auto px-6">
+                    <div class="text-center mb-16 fade-in">
+                        <h2 class="section-title text-4xl font-bold text-light inline-block">My <span class="text-gradient">Projects</span></h2>
+                        <p class="text-light opacity-80 max-w-2xl mx-auto mt-8 text-lg">
+                            Some of my most relevant works. Hover to see details.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Project 1 -->
+                        <div class="project-card fade-in">
+                            <div class="relative h-64 overflow-hidden">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOgyc-vn42VEGFui21KvBYLg6MoURxp_IRSY3086vWW8-x6lmkWFxtYP1O6GHUDDqZ1H4&usqp=CAU" 
+                                     alt="VisionAlign" 
+                                     class="project-image w-full h-full object-cover">
+                                <img src="assets/gifs/video_detectado.gif" 
+                                     alt="GIF VisionAlign" 
+                                     class="project-gif">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                                    <div>
+                                        <h3 class="text-xl font-bold text-white mb-2">VisionAlign</h3>
+                                        <p class="text-white opacity-90 text-sm">Computer vision AI that detects the orientation of cans and controls production lines.</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div>
-                                <label for="email" class="block text-light mb-2">Email</label>
-                                <input type="email" name="email" id="email" placeholder="Your email" required 
-                                       class="w-full contact-input p-4 rounded-lg text-light focus:ring-2 focus:ring-primary">
-                            </div>
-                            <div>
-                                <label for="subject" class="block text-light mb-2">Subject</label>
-                                <input type="text" name="subject" id="subject" placeholder="Subject of the message" 
-                                       class="w-full contact-input p-4 rounded-lg text-light focus:ring-2 focus:ring-primary">
-                            </div>
-                            <div>
-                                <label for="message" class="block text-light mb-2">Message</label>
-                                <textarea name="message" id="message" rows="5" placeholder="Your message" required 
-                                          class="w-full contact-input p-4 rounded-lg text-light focus:ring-2 focus:ring-primary"></textarea>
-                            </div>
-                            <div>
-                                <button type="submit" class="btn-gradient w-full px-6 py-4 rounded-full text-lg font-medium inline-flex items-center justify-center gap-2">
-                                    <i class="fas fa-paper-plane"></i> Send Message
-                                </button>
+                            <div class="p-6">
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="tech-badge text-xs px-3 py-1 rounded-full">Python</span>
+                                    <span class="tech-badge text-xs px-3 py-1 rounded-full">FastAPI</span>
+                                    <span class="tech-badge text-xs px-3 py-1 rounded-full">Pytorch</span>
+                                    <span class="tech-badge text-xs px-3 py-1 rounded-full">OpenCV</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <a href="#" class="text-primary text-sm font-medium hover:underline inline-flex items-center gap-1">
+                                        <i class="fas fa-external-link-alt"></i> Demo
+                                    </a>
+                                    <a href="https://github.com/VictorSilvaVS/VisionAlign" target="_blank" rel="noopener noreferrer" class="text-light text-sm font-medium hover:text-primary inline-flex items-center gap-1">
+                                        <i class="fab fa-github"></i> Code
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </form>
+
+                        <!-- Project 2 -->
+                        <div class="project-card fade-in" style="transition-delay: 100ms;">
+                            <div class="relative h-64 overflow-hidden">
+                                <img src="https://cdn.prod.website-files.com/61a51a6fff9085700039fcd8/63bc673c33fd7c7a6843246b_vis%C3%A3o%20computacional.png" 
+                                     alt="Chatbot Inteligente" 
+                                     class="project-image w-full h-full object-cover">
+                                <img src="https://media.giphy.com/media/S3nZFke4WXjDIFF1wv/giphy.gif" 
+                                     alt="GIF Chatbot" 
+                                     class="project-gif">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                                    <div>
+                                        <h3 class="text-xl font-bold text-white mb-2">VisionFracture</h3>
+                                        <p class="text-white opacity-90 text-sm">AI that inspects normal cans, detecting fractures in the dome for quality control.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="tech-badge text-xs px-3 py-1 rounded-full">Python</span>
+                                    <span class="tech-badge text-xs px-3 py-1 rounded-full">Pytorch</span>
+                                    <span class="tech-badge text-xs px-3 py-1 rounded-full">OpenCV</span>
+                                    <span class="tech-badge text-xs px-3 py-1 rounded-full">FastAPI</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <a href="#" class="text-primary text-sm font-medium hover:underline inline-flex items-center gap-1">
+                                        <i class="fas fa-external-link-alt"></i> Demo
+                                    </a>
+                                    <a href="https://github.com/VictorSilvaVS/VisionAlign" class="text-light text-sm font-medium hover:text-primary inline-flex items-center gap-1">
+                                        <i class="fab fa-github"></i> Code
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 3 -->
+                        <div class="project-card fade-in" style="transition-delay: 200ms;">
+                            <div class="relative h-64 overflow-hidden">
+                                <img src="./assets/img/Enem-Lab.png" 
+                                     alt="API de Análise de Sentimentos" 
+                                     class="project-image w-full h-full object-cover">
+                                <img src="https://media.giphy.com/media/l41lI4bY4Ijf62pfa/giphy.gif" 
+                                     alt="GIF API" 
+                                     class="project-gif">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                                    <div>
+                                        <h3 class="text-xl font-bold text-white mb-2">Enem Lab </h3>
+                                        <p class="text-white opacity-90 text-sm">An AI-powered study platform that diagnoses knowledge gaps and optimizes the study plan for the ENEM.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="tech-badge text-xs px-3 py-1 rounded-full">FastAPI</span>
+                                    <span class="tech-badge text-xs px-3 py-1 rounded-full">Keras</span>
+                                    <span class="tech-badge text-xs px-3 py-1 rounded-full">Python</span>
+                                    <span class="tech-badge text-xs px-3 py-1 rounded-full">Flask</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <a href="#" class="text-primary text-sm font-medium hover:underline inline-flex items-center gap-1">
+                                        <i class="fas fa-external-link-alt"></i> Demo
+                                    </a>
+                                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-light text-sm font-medium hover:text-primary inline-flex items-center gap-1">
+                                        <i class="fab fa-github"></i> Code
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-16 fade-in">
+                        <a href="https://github.com/VictorSilvaVS" target="_blank" rel="noopener noreferrer" class="btn-outline border border-primary text-primary hover:border-transparent px-8 py-3 rounded-full text-base font-medium inline-flex items-center gap-2">
+                            <i class="fas fa-eye"></i> View All Projects
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section id="experience" class="py-24 bg-dark">
+                <div class="container mx-auto px-6">
+                    <div class="text-center mb-16 fade-in">
+                        <h2 class="section-title text-4xl font-bold text-light inline-block">My <span class="text-gradient">Journey</span></h2>
+                        <p class="text-light opacity-80 max-w-2xl mx-auto mt-8 text-lg">
+                            My professional trajectory and achievements over the years.
+                        </p>
+                    </div>
+
+                    <div class="max-w-3xl mx-auto fade-in">
+                        <!-- Experience Timeline -->
+                        <div class="space-y-8">
+                            <div class="timeline-item">
+                                <div class="bg-gray-900 bg-opacity-50 rounded-xl p-6 border border-gray-800 hover:border-primary transition-all duration-300">
+                                    <h3 class="text-xl font-bold text-light mb-2">Technology Analyst</h3>
+                                    <div class="text-primary text-sm mb-3">Canpack Group • 2024 - Present</div>
+                                    <p class="text-light opacity-90">
+                                       As a technology specialist focused on optimizing industrial processes, I leverage machine learning and deep learning to analyze manufacturing data and drive our team towards World Class Manufacturing standards. My key contributions include developing AI for process control, computer vision, and data management. These advancements have led to a remarkable improvement of over 45% in spoilage and HFI reduction, significantly enhancing operational efficiency and cost savings.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="bg-gray-900 bg-opacity-50 rounded-xl p-6 border border-gray-800 hover:border-primary transition-all duration-300">
+                                    <h3 class="text-xl font-bold text-light mb-2">IT Support</h3>
+                                    <div class="text-primary text-sm mb-3">Suzano  • 2023 -2024</div>
+                                    <p class="text-light opacity-90">
+                                        System Documentation: Create and maintain system documentation for use by users, developers, and support staff.
+                                        Systems Testing: Plan and execute tests to ensure that IT systems meet requirements and function as expected.
+                                        Troubleshooting: Diagnose and resolve issues with IT systems, ensuring optimal availability and performance.
+                                        Process Improvement: Analyze business processes and IT systems to identify areas for improvement and implement solutions.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="bg-gray-900 bg-opacity-50 rounded-xl p-6 border border-gray-800 hover:border-primary transition-all duration-300">
+                                    <h3 class="text-xl font-bold text-light mb-2">Junior Developer</h3>
+                                    <div class="text-primary text-sm mb-3">Google Inc • 2022 - 2023</div>
+                                    <p class="text-light opacity-90">
+                                        I develop software solutions that align technical and business requirements, resulting in robust and high-performance applications. My work focuses on proactive analysis and correction of failures, optimizing stability and user experience. As a member of agile teams, I actively contribute to continuous improvement through code reviews and strategic planning sessions, ensuring efficient delivery of value.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Education -->
+                        <div class="mt-16 fade-in" style="transition-delay: 200ms;">
+                            <h3 class="text-2xl font-bold text-light mb-8 flex items-center gap-3">
+                                <i class="fas fa-graduation-cap text-primary"></i> Education
+                            </h3>
+                            <div class="bg-gray-900 bg-opacity-50 rounded-xl p-6 border border-gray-800 hover:border-primary transition-all duration-300">
+                            <h4 class="text-lg font-bold text-light mb-1">Associate Degree in Systems Development</h4>
+                            <div class="text-primary text-sm mb-3">SENAI • 2023 - 2025</div>
+                            <p class="text-light opacity-90">
+                                Associate's degree in systems development with a focus on web development, databases, and object-oriented programming.
+                            </p>
+                        </div>
+                            <div class="bg-gray-900 bg-opacity-50 rounded-xl p-6 border border-gray-800 hover:border-primary transition-all duration-300">
+                                <h4 class="text-lg font-bold text-light mb-1">Systems Analysis and Development</h4>
+                                <div class="text-primary text-sm mb-3">University of Fortaleza • 2023 - 2026</div>
+                                <p class="text-light opacity-90">
+                               Associate's Degree in Logic Programming and Object-Oriented Programming. 
+                                </p>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="py-24 grid-pattern">
+                <div class="container mx-auto px-6">
+                    <div class="text-center mb-16 fade-in">
+                        <h2 class="section-title text-4xl font-bold text-light inline-block">Get in <span class="text-gradient">Touch</span></h2>
+                        <p class="text-light opacity-80 max-w-2xl mx-auto mt-8 text-lg">
+                            Interested in working together? Let's talk!
+                        </p>
+                    </div>
+
+                    <div class="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+                        <div class="fade-in">
+                            <div class="bg-gray-900 bg-opacity-50 rounded-xl p-8 border border-gray-800 hover:border-primary transition-all duration-300 h-full">
+                                <h3 class="text-xl font-semibold text-light mb-6 flex items-center gap-3">
+                                    <i class="fas fa-envelope text-primary"></i> Contact Information
+                                </h3>
+                                <div class="space-y-4">
+                                    <div class="flex items-start gap-4">
+                                        <i class="fas fa-envelope text-primary mt-1"></i>
+                                        <div>
+                                            <h4 class="text-light font-medium">Email</h4>
+                                            <p class="text-light opacity-80 text-sm">victorsilva139br@gmail.com</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-4">
+                                        <i class="fas fa-phone-alt text-primary mt-1"></i>
+                                        <div>
+                                            <h4 class="text-light font-medium">Phone</h4>
+                                            <p class="text-light opacity-80 text-sm">+55 (85) 98809-2823</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-8">
+                                    <h3 class="text-xl font-semibold text-light mb-6 flex items-center gap-3">
+                                        <i class="fas fa-share-alt text-primary"></i> Social Media
+                                    </h3>
+                                    <div class="flex space-x-6">
+                                        <a href="https://github.com/VictorSilvaVS" target="_blank" rel="noopener noreferrer" class="social-icon text-light text-2xl hover:text-primary">
+                                            <i class="fab fa-github"></i>
+                                        </a>
+                                        <a href="https://www.linkedin.com/in/viktorsilva" target="_blank" rel="noopener noreferrer" class="social-icon text-light text-2xl hover:text-primary">
+                                            <i class="fab fa-linkedin-in"></i>
+                                        </a>
+                                        <a href="https://dev.to/vicode" target="_blank" rel="noopener noreferrer" class="social-icon text-light text-2xl hover:text-primary">
+                                            <i class="fab fa-dev"></i>
+                                        </a>
+                                        <a href="https://medium.com/@kingmister643" target="_blank" rel="noopener noreferrer" class="social-icon text-light text-2xl hover:text-primary">
+                                            <i class="fab fa-medium"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="fade-in" style="transition-delay: 150ms;">
+                            <form action="#" method="POST" class="bg-gray-900 bg-opacity-50 rounded-xl p-8 border border-gray-800 hover:border-primary transition-all duration-300 h-full">
+                                <div class="space-y-6">
+                                    <div>
+                                        <label for="name" class="block text-light mb-2">Name</label>
+                                        <input type="text" name="name" id="name" placeholder="Your name" required 
+                                               class="w-full contact-input p-4 rounded-lg text-light focus:ring-2 focus:ring-primary">
+                                    </div>
+                                    <div>
+                                        <label for="email" class="block text-light mb-2">Email</label>
+                                        <input type="email" name="email" id="email" placeholder="Your email" required 
+                                               class="w-full contact-input p-4 rounded-lg text-light focus:ring-2 focus:ring-primary">
+                                    </div>
+                                    <div>
+                                        <label for="subject" class="block text-light mb-2">Subject</label>
+                                        <input type="text" name="subject" id="subject" placeholder="Subject of the message" 
+                                               class="w-full contact-input p-4 rounded-lg text-light focus:ring-2 focus:ring-primary">
+                                    </div>
+                                    <div>
+                                        <label for="message" class="block text-light mb-2">Message</label>
+                                        <textarea name="message" id="message" rows="5" placeholder="Your message" required 
+                                                  class="w-full contact-input p-4 rounded-lg text-light focus:ring-2 focus:ring-primary"></textarea>
+                                    </div>
+                                    <div>
+                                        <button type="submit" class="btn-gradient w-full px-6 py-4 rounded-full text-lg font-medium inline-flex items-center justify-center gap-2">
+                                            <i class="fas fa-paper-plane"></i> Send Message
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-dark border-t border-gray-800 py-8">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="mb-4 md:mb-0">
+                        <a href="#" class="text-2xl font-bold text-gradient hover:opacity-80 transition-opacity">Victor Silva</a>
+                        <p class="text-light opacity-70 text-sm mt-2">Transforming ideas into intelligent solutions.</p>
+                    </div> 
+                    <div class="flex space-x-6">
+                        <a href="#home" class="text-light hover:text-primary transition-colors">Home</a>
+                        <a href="#about" class="text-light hover:text-primary transition-colors">About</a>
+                        <a href="#projects" class="text-light hover:text-primary transition-colors">Projects</a>
+                        <a href="#contact" class="text-light hover:text-primary transition-colors">Contact</a>
+                    </div>
+                </div>
+                <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500 text-sm">
+                    <p>&copy; 2023 IA Dev. All rights reserved.</p>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Footer -->
-    <footer class="bg-dark border-t border-gray-800 py-8">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-4 md:mb-0">
-                    <a href="#" class="text-2xl font-bold text-gradient hover:opacity-80 transition-opacity">Victor Silva</a>
-                    <p class="text-light opacity-70 text-sm mt-2">Transforming ideas into intelligent solutions.</p>
-                </div> 
-                <div class="flex space-x-6">
-                    <a href="#home" class="text-light hover:text-primary transition-colors">Home</a>
-                    <a href="#about" class="text-light hover:text-primary transition-colors">About</a>
-                    <a href="#projects" class="text-light hover:text-primary transition-colors">Projects</a>
-                    <a href="#contact" class="text-light hover:text-primary transition-colors">Contact</a>
-                </div>
-            </div>
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500 text-sm">
-                <p>&copy; 2023 IA Dev. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+        </footer>
 
-    <!-- Back to Top Button -->
-    <button id="back-to-top" class="fixed bottom-8 right-8 bg-gray-900 bg-opacity-80 text-primary w-12 h-12 rounded-full flex items-center justify-center border border-gray-800 hover:bg-primary hover:text-dark transition-all duration-300 opacity-0 invisible">
-        <i class="fas fa-arrow-up"></i>
-    </button>
+        <!-- Back to Top Button -->
+        <button id="back-to-top" class="fixed bottom-8 right-8 bg-gray-900 bg-opacity-80 text-primary w-12 h-12 rounded-full flex items-center justify-center border border-gray-800 hover:bg-primary hover:text-dark transition-all duration-300 opacity-0 invisible">
+            <i class="fas fa-arrow-up"></i>
+        </button>
 
-<script src="assets/js/main.js"></script>
-</script>
-</body>
+        <!-- Scripts -->
+        <script src="assets/js/main.js"></script>
+    </body>
 </html>
